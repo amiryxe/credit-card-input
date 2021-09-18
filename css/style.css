@@ -1,3 +1,7 @@
+body {
+  background: #fdfdfd;
+}
+
 .credit-card-inputs {
   width: 100%;
   max-width: 600px;
@@ -8,6 +12,7 @@
 .credit-card-inputs input {
   border: none;
   outline: none;
+  background: transparent;
   box-sizing: border-box;
   border-bottom: 2px solid #ccc;
   font-size: 2rem;
@@ -17,6 +22,13 @@
   color: #555;
   font-family: monospace;
   padding: 0.5rem 0;
+  transition: all 0.3s;
+}
+.credit-card-inputs input:focus {
+  border-color: lightseagreen;
+}
+.credit-card-inputs input::placeholder {
+  color: #ccc;
 }
 
 /*# sourceMappingURL=style.css.map */

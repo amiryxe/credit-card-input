@@ -1,3 +1,5 @@
+@import "./demo";
+
 .credit-card-inputs {
   width: 100%;
   max-width: 600px;
@@ -8,6 +10,7 @@
   input {
     border: none;
     outline: none;
+    background: transparent;
     box-sizing: border-box;
     border-bottom: 2px solid #ccc;
     font-size: 2rem;
@@ -17,5 +20,14 @@
     color: #555;
     font-family: monospace;
     padding: 0.5rem 0;
+    transition: all 0.3s;
+
+    &:focus {
+      border-color: lightseagreen;
+    }
+
+    &::placeholder {
+      color: #ccc;
+    }
   }
 }
