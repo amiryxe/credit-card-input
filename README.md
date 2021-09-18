@@ -2,6 +2,8 @@
 
 Simple credit card input with multiple fields
 
+## [DEMO](https://amiryxe.github.io/credit-card-input/)
+
 ## How to use
 
 include style:
