@@ -3,11 +3,16 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-.demo__result {
+h1 {
+  margin-top: 3rem;
+}
+
+.container {
   width: 100%;
   max-width: 600px;
   margin: auto;
 }
+
 .demo__result em {
   display: block;
   margin-bottom: 0.5rem;
