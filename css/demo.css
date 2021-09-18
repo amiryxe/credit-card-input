@@ -1,3 +1,4 @@
+/* Demo Styles */
 body {
   background: #fdfdfd;
   font-family: Helvetica, sans-serif;
@@ -18,5 +19,7 @@ h1 {
   margin-bottom: 0.5rem;
   color: #555;
 }
+
+/* End of Demo Styles */
 
 /*# sourceMappingURL=demo.css.map */
