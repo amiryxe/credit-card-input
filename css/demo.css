@@ -1,0 +1,22 @@
+body {
+  background: #fdfdfd;
+  font-family: Helvetica, sans-serif;
+}
+
+h1 {
+  margin-top: 3rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.demo__result em {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+/*# sourceMappingURL=demo.css.map */
