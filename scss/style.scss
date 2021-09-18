@@ -8,29 +8,29 @@
   &__fields {
     display: flex;
     justify-content: space-between;
-  }
 
-  input {
-    border: none;
-    outline: none;
-    background: transparent;
-    box-sizing: border-box;
-    border-bottom: 2px solid #ccc;
-    font-size: 2rem;
-    width: 8rem;
-    text-align: center;
-    letter-spacing: 0.5rem;
-    color: #555;
-    font-family: monospace;
-    padding: 0.5rem 0;
-    transition: all 0.3s;
+    input {
+      border: none;
+      outline: none;
+      background: transparent;
+      box-sizing: border-box;
+      border-bottom: 2px solid #ccc;
+      font-size: 2rem;
+      width: 8rem;
+      text-align: center;
+      letter-spacing: 0.5rem;
+      color: #555;
+      font-family: monospace;
+      padding: 0.5rem 0;
+      transition: all 0.3s;
 
-    &:focus {
-      border-color: lightseagreen;
-    }
+      &:focus {
+        border-color: lightseagreen;
+      }
 
-    &::placeholder {
-      color: #ccc;
+      &::placeholder {
+        color: #ccc;
+      }
     }
   }
 
@@ -47,6 +47,18 @@
 
     &:hover {
       background: #e5e5e5;
+    }
+  }
+
+  &__result {
+    margin-top: 2rem;
+
+    h4 {
+      margin: 0;
+    }
+
+    em {
+      display: block;
     }
   }
 }

@@ -1,5 +1,17 @@
 body {
   background: #fdfdfd;
+  font-family: Helvetica, sans-serif;
+}
+
+.demo__result {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+.demo__result em {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
 }
 
 .credit-card-inputs {
@@ -11,7 +23,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.credit-card-inputs input {
+.credit-card-inputs__fields input {
   border: none;
   outline: none;
   background: transparent;
@@ -26,10 +38,10 @@ body {
   padding: 0.5rem 0;
   transition: all 0.3s;
 }
-.credit-card-inputs input:focus {
+.credit-card-inputs__fields input:focus {
   border-color: lightseagreen;
 }
-.credit-card-inputs input::placeholder {
+.credit-card-inputs__fields input::placeholder {
   color: #ccc;
 }
 .credit-card-inputs__reset {
@@ -45,6 +57,15 @@ body {
 }
 .credit-card-inputs__reset:hover {
   background: #e5e5e5;
+}
+.credit-card-inputs__result {
+  margin-top: 2rem;
+}
+.credit-card-inputs__result h4 {
+  margin: 0;
+}
+.credit-card-inputs__result em {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

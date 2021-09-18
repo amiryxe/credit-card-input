@@ -1,3 +1,18 @@
 body {
   background: #fdfdfd;
+  font-family: Helvetica, sans-serif;
+}
+
+.demo {
+  &__result {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+
+    em {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+  }
 }
