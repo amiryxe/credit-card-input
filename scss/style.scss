@@ -16,13 +16,17 @@
       box-sizing: border-box;
       border-bottom: 2px solid #ccc;
       font-size: 2rem;
-      width: 8rem;
+      width: 23%;
       text-align: center;
       letter-spacing: 0.5rem;
       color: #555;
       font-family: monospace;
       padding: 0.5rem 0;
       transition: all 0.3s;
+
+      @media (max-width: 600px) {
+        font-size: 1rem;
+      }
 
       &:focus {
         border-color: lightseagreen;
