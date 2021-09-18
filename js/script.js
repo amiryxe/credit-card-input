@@ -17,7 +17,7 @@ $(".credit-card-inputs input").on("input", (e) => {
     $(e.target).next().focus();
   }
 
-  $("#credit_card").val(result.join(""));
+  $("#credit_card_result").val(result.join(""));
 });
 
 $(".credit-card-inputs input").on("keydown", (e) => {
@@ -30,7 +30,7 @@ $(".credit-card-inputs input").on("keydown", (e) => {
       let value = result[pos - 2] ? result[pos - 2].slice(0, -1) : "";
       result[pos - 2] = value;
       $(e.target).prev().focus().val(value);
-      $("#credit_card").val(result.join(""));
+      $("#credit_card_result").val(result.join(""));
     }
   }
 
@@ -51,4 +51,10 @@ $(".credit-card-inputs input").on("keydown", (e) => {
   ) {
     e.preventDefault();
   }
+});
+
+$(".credit-card-inputs__reset").on("click", function () {
+  $(".credit-card-inputs input").val("");
+  $("#credit_card_result").val("");
+  result.length = 0;
 });

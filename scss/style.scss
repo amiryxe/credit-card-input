@@ -3,9 +3,12 @@
 .credit-card-inputs {
   width: 100%;
   max-width: 600px;
-  display: flex;
-  justify-content: space-between;
   margin: 10rem auto;
+
+  &__fields {
+    display: flex;
+    justify-content: space-between;
+  }
 
   input {
     border: none;
@@ -28,6 +31,22 @@
 
     &::placeholder {
       color: #ccc;
+    }
+  }
+
+  &__reset {
+    display: block;
+    background: #eee;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    font-family: monospace;
+    padding: 0.5rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background: #e5e5e5;
     }
   }
 }
