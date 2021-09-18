@@ -1,0 +1,22 @@
+.credit-card-inputs {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10rem auto;
+}
+.credit-card-inputs input {
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ccc;
+  font-size: 2rem;
+  width: 8rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  color: #555;
+  font-family: monospace;
+  padding: 0.5rem 0;
+}
+
+/*# sourceMappingURL=style.css.map */
