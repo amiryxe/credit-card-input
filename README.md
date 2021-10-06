@@ -33,3 +33,12 @@ use this HTML structure:
   <button class="credit-card-inputs__reset">Reset</button>
 </div>
 ```
+
+## CDN
+```css
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amiryxe/credit-card-input/css/credit-card-input.css">
+```
+
+```js
+<script src="https://cdn.jsdelivr.net/gh/amiryxe/credit-card-input/js/credit-card-input.min.js"></script>
+```
