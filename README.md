@@ -36,7 +36,7 @@ use this HTML structure:
 
 ## CDN
 ```css
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amiryxe/credit-card-input/css/credit-card-input.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amiryxe/credit-card-input/css/credit-card-input.min.css">
 ```
 
 ```js
