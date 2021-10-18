@@ -8,19 +8,19 @@ You can also see the demo on the [Codepen](https://codepen.io/amiryxe/pen/QWgQPE
 
 ## How to use
 
-include style:
+Include the style file:
 
 ```css
 <link rel="stylesheet" href="./css/credit-card-input.css">
 ```
 
-include js file after jquery:
+Include the js file after jQuery:
 
 ```js
 <script src="./js/credit-card-input.js"></script>
 ```
 
-use this HTML structure:
+Use this HTML structure to initial credit inputs:
 
 ```html
 <div class="credit-card-inputs">
