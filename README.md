@@ -1,10 +1,15 @@
 # Credit card input
 
-Simple credit card input with multiple fields
+Simple credit card input with multiple fields.
 
 ## [DEMO](https://amiryxe.github.io/credit-card-input/)
 
 You can also see the demo on the [Codepen](https://codepen.io/amiryxe/pen/QWgQPEa)
+
+## Features
+- Automatically focuses the next field
+- Only accepts numbers
+- Holds the main input
 
 ## How to use
 
