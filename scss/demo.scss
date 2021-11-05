@@ -29,19 +29,27 @@ h1 {
       color: #444444;
       font-size: 14px;
       padding: 6px 8px;
+      padding-right: 5px;
       background-color: #ebe9e9;
       border-radius: 5px;
       display: none;
 
+      svg {
+        max-width: 16px;
+        vertical-align: middle;
+        fill: #444444;
+      }
+
       span {
         width: 0;
-        display: inline-block;
         overflow: hidden;
         transition: 0.5s;
+        display: inline-block;
+        transform: translateY(3px);
 
         &.show {
           width: 50px;
-          animation: hideSpan 0.3s ease-in-out 1.4s forwards;
+          animation: hideSpan 0.3s ease-in-out 1.2s forwards;
         }
       }
 
@@ -53,12 +61,6 @@ h1 {
         100% {
           width: 0;
         }
-      }
-
-      svg {
-        max-width: 16px;
-        vertical-align: middle;
-        fill: #444444;
       }
 
       &:hover {
