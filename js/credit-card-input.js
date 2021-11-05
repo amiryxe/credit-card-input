@@ -18,7 +18,6 @@ $(".credit-card-inputs input").on("input", (e) => {
   }
 
   $("#credit_card_result").val(result.join(""));
-  toggleHideShowCopyButton();
 });
 
 $(".credit-card-inputs input").on("keydown", (e) => {
@@ -32,7 +31,6 @@ $(".credit-card-inputs input").on("keydown", (e) => {
       result[pos - 2] = value;
       $(e.target).prev().focus().val(value);
       $("#credit_card_result").val(result.join(""));
-      toggleHideShowCopyButton();
     }
   }
 
@@ -58,27 +56,3 @@ $(".credit-card-inputs__reset").on("click", function () {
   $("#credit_card_result").val("");
   result.length = 0;
 });
-
-
-function toggleHideShowCopyButton(){
-  let creditCardInput = document.getElementById("credit_card_result");
-  if (creditCardInput.value.length === 16) {
-    document.querySelector(".copy-to-clipboard").classList.add("isComplete");
-  } else {
-    document.querySelector(".copy-to-clipboard").classList.remove("isComplete");
-  }
-}
-
-// copy credit card to clipboard
-function copyCreditCardToClipboard(element) {
-  console.log(element.getElementsByTagName('span'));
-  let copyText = document.getElementById("credit_card_result");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(copyText.value);
-  element.getElementsByTagName('span')[0].textContent = "copied!";
-  setTimeout(function(){
-    element.getElementsByTagName('span')[0].textContent = "copy to clipboard!";
-  } , 1500);
-  // alert("Copied the text: " + copyText.value);
-}
