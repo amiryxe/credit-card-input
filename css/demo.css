@@ -19,6 +19,27 @@ h1 {
   margin-bottom: 0.5rem;
   color: #555;
 }
+.demo__result .copy-to-clipboard {
+  margin-left: 6px;
+  cursor: pointer;
+  color: #444444;
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: #ebe9e9;
+  border-radius: 5px;
+  display: none;
+}
+.demo__result .copy-to-clipboard svg {
+  max-width: 16px;
+  vertical-align: middle;
+  fill: #444444;
+}
+.demo__result .copy-to-clipboard:hover {
+  background-color: #dddddd;
+}
+.demo__result .copy-to-clipboard.isComplete {
+  display: inline;
+}
 
 /* End of Demo Styles */
 

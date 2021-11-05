@@ -22,6 +22,31 @@ h1 {
       margin-bottom: 0.5rem;
       color: #555;
     }
+
+    .copy-to-clipboard {
+      margin-left: 6px;
+      cursor: pointer;
+      color: #444444;
+      font-size: 14px;
+      padding: 6px 12px;
+      background-color: #ebe9e9;
+      border-radius: 5px;
+      display: none;
+
+      svg {
+        max-width: 16px;
+        vertical-align: middle;
+        fill: #444444;
+      }
+
+      &:hover {
+        background-color: #dddddd;
+      }
+
+      &.isComplete {
+        display: inline;
+      }
+    }
   }
 }
 
