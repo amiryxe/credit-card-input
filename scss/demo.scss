@@ -28,10 +28,32 @@ h1 {
       cursor: pointer;
       color: #444444;
       font-size: 14px;
-      padding: 6px 12px;
+      padding: 6px 8px;
       background-color: #ebe9e9;
       border-radius: 5px;
       display: none;
+
+      span {
+        width: 0;
+        display: inline-block;
+        overflow: hidden;
+        transition: 0.5s;
+
+        &.show {
+          width: 50px;
+          animation: hideSpan 0.3s ease-in-out 1.4s forwards;
+        }
+      }
+
+      @keyframes hideSpan {
+        0% {
+          width: 50px;
+        }
+
+        100% {
+          width: 0;
+        }
+      }
 
       svg {
         max-width: 16px;

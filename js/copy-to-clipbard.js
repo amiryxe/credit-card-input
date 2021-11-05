@@ -18,8 +18,9 @@ function copyCreditCardToClipboard(element) {
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
 
-    element.getElementsByTagName('span')[0].textContent = "Copied!";
+    element.querySelector('span').classList.add('show');
+
     setTimeout(function () {
-        element.getElementsByTagName('span')[0].textContent = "";
+        element.querySelector('span').classList.remove('show');
     }, 1500);
 }
