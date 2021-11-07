@@ -10,6 +10,7 @@ You can also see the demo on the [Codepen](https://codepen.io/amiryxe/pen/QWgQPE
 - Automatically focuses the next field
 - Only accepts numbers
 - Holds the main input
+- Copy to clipboard
 
 ## How to use
 
@@ -37,6 +38,11 @@ Use this HTML structure to initial credit inputs:
   </div>
   <button class="credit-card-inputs__reset">Reset</button>
 </div>
+```
+
+If you want use copy to clipboard feature, include this file to your project:
+```js
+<script src="./js/copy-to-clipboard.js"></script>
 ```
 
 ## CDN
