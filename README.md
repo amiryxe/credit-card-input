@@ -40,7 +40,7 @@ Use this HTML structure to initial credit inputs:
 </div>
 ```
 
-If you want use copy to clipboard feature, include this file to your project:
+If you want to use the copy to clipboard feature, include this file in your project:
 ```js
 <script src="./js/copy-to-clipboard.js"></script>
 ```
