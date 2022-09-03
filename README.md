@@ -1,6 +1,6 @@
 # Credit card input
 
-Simple credit card input with multiple fields.
+Credit card form with multiple fields.
 
 ## [DEMO](https://amiryxe.github.io/credit-card-input/)
 
