@@ -1,4 +1,4 @@
-const result = [];
+const result = []
 
 document.querySelectorAll(".credit-card-inputs input")
   .forEach(item => {
@@ -8,7 +8,7 @@ document.querySelectorAll(".credit-card-inputs input")
 
       if (currentVal.length > 4) {
         e.target.value = result[pos - 1]
-        e.target.nextElementSibling.focus()
+        // e.target.nextElementSibling.focus()
 
         e.preventDefault()
         return false
@@ -35,26 +35,28 @@ document.querySelectorAll(".credit-card-inputs input")
 
           const val = result[pos - 2] ? result[pos - 2].slice(0, -1) : ""
           result[pos - 2] = val
-          e.target.previousElementSibling.focus().value = val
+
+          e.target.previousElementSibling.focus().value
 
           document.querySelector("#credit_card_result").value = result.join("")
         }
       }
 
       // prevent enter alphabetic keys
-      // if (
-      //   $.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
-      //   (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
-      //   (e.keyCode >= 35 && e.keyCode <= 40)
-      // ) {
-      //   return;
-      // }
-      // if (
-      //   (e.shiftKey || e.keyCode < 48 || e.keyCode > 57) &&
-      //   (e.keyCode < 96 || e.keyCode > 105)
-      // ) {
-      //   e.preventDefault();
-      // }
+      if (
+        [46, 8, 9, 27, 13].indexOf(e.keyCode) !== -1 ||
+        (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+        (e.keyCode >= 35 && e.keyCode <= 40)
+      ) {
+        return
+      }
+
+      if (
+        (e.shiftKey || e.keyCode < 48 || e.keyCode > 57) &&
+        (e.keyCode < 96 || e.keyCode > 105)
+      ) {
+        e.preventDefault()
+      }
     })
   })
 
