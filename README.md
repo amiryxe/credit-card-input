@@ -20,7 +20,7 @@ Include the style file:
 <link rel="stylesheet" href="./css/credit-card-input.css">
 ```
 
-Include the js file after jQuery:
+Include the js file:
 
 ```js
 <script src="./js/credit-card-input.js"></script>
