@@ -1,6 +1,6 @@
 # Credit card input
 
-Credit card form with multiple fields.
+Vanilla JS credit card form with multiple fields.
 
 ## [DEMO](https://amiryxe.github.io/credit-card-input/)
 
