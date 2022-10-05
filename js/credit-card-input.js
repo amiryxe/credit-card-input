@@ -1,58 +1,69 @@
 const result = [];
 
-$(".credit-card-inputs input").on("input", (e) => {
-  const pos = $(e.target).data("pos");
-  const currentVal = $(e.target).val();
+document.querySelectorAll(".credit-card-inputs input")
+  .forEach(item => {
+    item.addEventListener("input", (e) => {
+      const pos = e.target.getAttribute('data-pos')
+      const currentVal = e.target.value
 
-  if (currentVal.length > 4) {
-    $(e.target).val(result[pos - 1]);
-    $(e.target).next().focus();
-    e.preventDefault();
-    return false;
-  }
+      if (currentVal.length > 4) {
+        e.target.value = result[pos - 1]
+        e.target.nextElementSibling.focus()
 
-  result[pos - 1] = currentVal;
+        e.preventDefault()
+        return false
+      }
 
-  if (currentVal.length === 4) {
-    $(e.target).next().focus();
-  }
+      result[pos - 1] = currentVal;
 
-  $("#credit_card_result").val(result.join(""));
-});
+      if (currentVal.length === 4) {
+        e.target.nextElementSibling.focus()
+      }
 
-$(".credit-card-inputs input").on("keydown", (e) => {
-  const pos = $(e.target).data("pos");
+      document.querySelector("#credit_card_result").value = result.join("")
+    })
+  })
 
-  if (e.keyCode === 8) {
-    if ($(e.target).val().length === 0 && pos > 1) {
-      e.preventDefault();
+document.querySelectorAll(".credit-card-inputs input")
+  .forEach(item => {
+    item.addEventListener("keydown", (e) => {
+      const pos = e.target.getAttribute('data-pos')
 
-      let value = result[pos - 2] ? result[pos - 2].slice(0, -1) : "";
-      result[pos - 2] = value;
-      $(e.target).prev().focus().val(value);
-      $("#credit_card_result").val(result.join(""));
-    }
-  }
+      if (e.keyCode === 8) {
+        if (e.target.value.length === 0 && pos > 1) {
+          e.preventDefault()
 
-  // prevent enter alphabetic keys
-  if (
-    $.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
-    (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
-    (e.keyCode >= 35 && e.keyCode <= 40)
-  ) {
-    return;
-  }
-  if (
-    (e.shiftKey || e.keyCode < 48 || e.keyCode > 57) &&
-    (e.keyCode < 96 || e.keyCode > 105)
-  ) {
-    e.preventDefault();
-  }
-});
+          const val = result[pos - 2] ? result[pos - 2].slice(0, -1) : ""
+          result[pos - 2] = val
+          e.target.previousElementSibling.focus().value = val
+
+          document.querySelector("#credit_card_result").value = result.join("")
+        }
+      }
+
+      // prevent enter alphabetic keys
+      // if (
+      //   $.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
+      //   (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+      //   (e.keyCode >= 35 && e.keyCode <= 40)
+      // ) {
+      //   return;
+      // }
+      // if (
+      //   (e.shiftKey || e.keyCode < 48 || e.keyCode > 57) &&
+      //   (e.keyCode < 96 || e.keyCode > 105)
+      // ) {
+      //   e.preventDefault();
+      // }
+    })
+  })
 
 // reset button handler
-$(".credit-card-inputs__reset").on("click", function () {
-  $(".credit-card-inputs input").val("");
-  $("#credit_card_result").val("");
-  result.length = 0;
-});
+document.querySelector(".credit-card-inputs__reset")
+  .addEventListener("click", function () {
+    document.querySelectorAll(".credit-card-inputs input").forEach(item => item.value = "")
+
+    document.querySelector("#credit_card_result").value = ""
+
+    result.length = 0
+  });
